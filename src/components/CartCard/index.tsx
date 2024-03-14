@@ -33,7 +33,7 @@ export default function CartCard({ product }: ProductCardProps) {
           </S.TitleContent>
           <S.QuantityController>
             <S.QuantityContainer>
-              <S.ButtonIcon onClick={() => useStorage.removeItem(product)}>
+              <S.ButtonIcon onClick={() => useStorage.removeQuantity(product)}>
                 <img src={Minus} width={18} height={18} />
               </S.ButtonIcon>
               <S.QuantityContent>{product.quantity}</S.QuantityContent>
@@ -52,7 +52,7 @@ export default function CartCard({ product }: ProductCardProps) {
             </S.SubContent>
           </S.QuantityController>
         </S.ContentController>
-        <S.ButtonIcon>
+        <S.ButtonIcon onClick={() => useStorage.removeItem(product.id)}>
           <img src={Trash} width={18} height={18} />
         </S.ButtonIcon>
       </S.Content>

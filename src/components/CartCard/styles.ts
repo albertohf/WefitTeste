@@ -3,7 +3,6 @@ import { theme } from "../../styles/theme";
 
 export const Content = styled.div`
   display: flex;
-
   gap: 1rem;
   padding: 1.6rem;
 

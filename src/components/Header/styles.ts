@@ -8,16 +8,13 @@ export const NavContainer = styled.nav`
   align-items: center;
 `;
 export const NavContent = styled.div`
-  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
   height: 8.8rem;
   margin: 0 2.4rem;
 
-  @media (max-width: ${theme.breakpoints.sm}) {
-    justify-content: space-between;
-  }
   @media (min-width: ${theme.breakpoints.md}) {
     max-width: 720px;
   }
@@ -31,9 +28,9 @@ export const NavContent = styled.div`
 
 export const StyledLink = styled(Link)`
   font-family: ${theme.font.family};
-  color: #fff;
+  color: ${theme.colors.white};
   font-size: ${theme.font.sizes.large};
-  font-weight: 700;
+  font-weight: ${theme.font.extraBold};
   line-height: 2.7rem;
   text-decoration: none;
 `;
@@ -43,10 +40,9 @@ export const StyledCartLink = styled(Link)`
 export const CartLinkContent = styled.div`
   display: flex;
   align-items: center;
-  color: #fff;
+  color: ${theme.colors.white};
 `;
-export const CartTextContent = styled.div`
-  display: flex;
+export const CartTextContent = styled(CartLinkContent)`
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;

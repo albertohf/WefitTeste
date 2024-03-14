@@ -1,22 +1,17 @@
 import styled from "styled-components";
 import { theme } from "../../styles/theme";
 
-export const ContentLoader = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
 export const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
+export const ContentLoader = styled(Content)`
+  margin-top: 4rem;
+`;
 
-export const CardConteiner = styled.div`
-  display: flex;
+export const CardConteiner = styled(Content)`
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
 `;
 export const CardContent = styled.div`

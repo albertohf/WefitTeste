@@ -3,7 +3,6 @@ import GeneralBanner from "../../components/GeneralBanner";
 import { useCartStore, ProductState } from "../../store";
 import EmptyCart from "../../assets/emptyCart.svg";
 import * as S from "./styles";
-import * as H from "../Home/styles";
 import CheckoutButton from "./components/checkoutButton";
 import CartCard from "../../components/CartCard";
 import { useNavigate } from "react-router-dom";
@@ -28,14 +27,14 @@ export default function Cart() {
       <Header />
       <>
         {useStorage.cart.length <= 0 && (
-          <H.Content>
+          <S.ContainerController>
             <GeneralBanner
               title="Seu carrinho está vazio :("
               image={EmptyCart}
               textButton="Voltar"
               buttonClick={handleClick}
             />
-          </H.Content>
+          </S.ContainerController>
         )}
         {useStorage.cart.length > 0 && (
           <S.ContainerController>

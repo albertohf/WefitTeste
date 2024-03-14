@@ -50,5 +50,3 @@ export const StyledButton = styled.div`
   line-height: 1.6rem;
   cursor: pointer;
 `;
-
-export const StyledImg = styled.img``;

@@ -4,7 +4,18 @@ import { theme } from "../../styles/theme";
 export const Container = styled.div`
   width: 100%;
   margin-bottom: 1.6rem;
+
+  @media (min-width: ${theme.breakpoints.sm}) {
+    width: 47.9%;
+  }
+
   @media (min-width: ${theme.breakpoints.md}) {
+    width: 31.8%;
+  }
+  @media (min-width: ${theme.breakpoints.lg}) {
+    width: 32.2%;
+  }
+  @media (min-width: ${theme.breakpoints.xxl}) {
     width: 32.3%;
   }
 `;

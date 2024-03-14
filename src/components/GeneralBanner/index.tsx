@@ -16,7 +16,7 @@ export default function GeneralBanner({
   return (
     <S.Container>
       <S.StyledTitle>{title}</S.StyledTitle>
-      <S.StyledImg src={image} alt="" width={180} height={264} />
+      <img src={image} alt="" width={180} height={264} />
       <S.StyledButton onClick={buttonClick}>{textButton}</S.StyledButton>
     </S.Container>
   );

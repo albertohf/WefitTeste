@@ -13,7 +13,8 @@ export interface ProductState {
 interface CartState {
   cart: ProductState[];
   addItem: (item: ProductType) => void;
-  removeItem: (item: ProductType) => void;
+  removeQuantity: (item: ProductType) => void;
+  removeItem: (item: number) => void;
   clearCart: () => void;
 }
 
@@ -41,7 +42,7 @@ export const useCartStore = create<CartState>()(
             return { cart: [...state.cart, { ...item, quantity: 1 }] };
           }
         }),
-      removeItem: (item: ProductType) =>
+      removeQuantity: (item: ProductType) =>
         set((state) => {
           const existProduct = state.cart.find(
             (product) => product.id === item.id
@@ -61,6 +62,11 @@ export const useCartStore = create<CartState>()(
             const filteredCart = state.cart.filter((p) => p.id !== item.id);
             return { cart: filteredCart };
           }
+        }),
+      removeItem: (item: number) =>
+        set((state) => {
+          const filteredCart = state.cart.filter((p) => p.id !== item);
+          return { cart: filteredCart };
         }),
       clearCart: () => set({ cart: [] }),
     }),

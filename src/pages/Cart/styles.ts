@@ -54,10 +54,8 @@ export const TotalTitle = styled.div`
   line-height: 19px;
   color: ${theme.colors.neutral_gray};
 `;
-export const TotalPrice = styled.div`
-  font-family: ${theme.font.family};
+export const TotalPrice = styled(TotalTitle)`
   font-size: 2.4rem;
-  font-weight: ${theme.font.extraBold};
   line-height: 33px;
   color: ${theme.colors.darkGrayishBlue};
 `;
